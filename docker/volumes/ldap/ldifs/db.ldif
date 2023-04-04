@@ -1,0 +1,94 @@
+dn: dc=example,dc=com
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: example
+
+dn: ou=groups,dc=example,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=users,dc=example,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: users
+
+dn: uid=user1,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: A B
+sn: C
+uid: user1
+userPassword: $2b$12$7oXGgPcRNzZzvgpK1NBFEOdKl3CYT8Vl1MLAhQeRW2VzLKVhUU0Se
+
+dn: uid=user2,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: A B
+sn: A
+uid: user2
+userPassword: $2b$12$7oXGgPcRNzZzvgpK1NBFEOdKl3CYT8Vl1MLAhQeRW2VzLKVhUU0Se
+
+dn: uid=user3,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: A B
+sn: A
+uid: user3
+userPassword: $2b$12$7oXGgPcRNzZzvgpK1NBFEOdKl3CYT8Vl1MLAhQeRW2VzLKVhUU0Se
+
+dn: uid=user4,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: A B
+sn: A
+uid: user4
+userPassword: $2b$12$7oXGgPcRNzZzvgpK1NBFEOdKl3CYT8Vl1MLAhQeRW2VzLKVhUU0Se
+
+dn: uid=admin1,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: A B
+sn: A
+uid: admin1
+userPassword: $2b$12$7oXGgPcRNzZzvgpK1NBFEOdKl3CYT8Vl1MLAhQeRW2VzLKVhUU0Se
+
+dn: uid=admin2,ou=users,dc=example,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: A B
+sn: A
+uid: admin2
+userPassword: $2b$12$7oXGgPcRNzZzvgpK1NBFEOdKl3CYT8Vl1MLAhQeRW2VzLKVhUU0Se
+
+
+dn: cn=students,ou=groups,dc=example,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: students
+ou: student
+uniqueMember: uid=user1,ou=users,dc=example,dc=com
+uniqueMember: uid=user2,ou=users,dc=example,dc=com
+uniqueMember: uid=user3,ou=users,dc=example,dc=com
+uniqueMember: uid=user4,ou=users,dc=example,dc=com
+
+dn: cn=teachers,ou=groups,dc=example,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: teachers
+ou: teacher
+uniqueMember: uid=admin1,ou=users,dc=example,dc=com
+uniqueMember: uid=admin2,ou=users,dc=example,dc=com
